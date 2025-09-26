@@ -215,11 +215,11 @@ public class Screen extends JFrame{
     private void yeniKitapEkle(JFrame parentFrame) {
         JPanel panel = new JPanel(new GridLayout(4, 2, 5, 5));
 
-        JTextField adField = new JTextField();
-        JTextField yazarField = new JTextField();
-        JTextField sayfaField = new JTextField();
-        JTextField yayinField = new JTextField();
-        JTextField yorumField = new JTextField();
+        JTextField adField = new JTextField(15);
+        JTextField yazarField = new JTextField(15);
+        JTextField sayfaField = new JTextField(15);
+        JTextField yayinField = new JTextField(15);
+        JTextField yorumField = new JTextField(15);
 
         panel.add(new JLabel("Kitap Adı:"));
         panel.add(adField);
@@ -232,7 +232,7 @@ public class Screen extends JFrame{
         panel.add(new JLabel("Yorum:"));
         panel.add(yorumField);
 
-        int result = JOptionPane.showConfirmDialog(this, panel,
+        int result = JOptionPane.showConfirmDialog(parentFrame, panel,
                 "Yeni Kitap Ekle", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
         if (result == JOptionPane.OK_OPTION) {
@@ -260,4 +260,5 @@ public class Screen extends JFrame{
         kitapSayisi.setText("Toplam Kitap Sayısı: " + kitaplik.getKitapSayisi());
         sayfalar.setText("Toplam Sayfa Sayısı: " + kitaplik.getSayfaSayisi());
     }
+
 }
