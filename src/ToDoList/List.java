@@ -24,8 +24,12 @@ public class List extends JFrame{
                 if (text.isEmpty()){
                     JOptionPane.showMessageDialog(//uyarı ekranı açar
                           null,//ortada açılmasını sağlar
-                          "Görev Girilmedi!"
+                          "Görev Girilmedi!",//mesaj
+                           "Uyarı",//başlık
+                           JOptionPane.WARNING_MESSAGE //ikon tipi
                     );
+                }else {
+
                 }
         });
     }
